@@ -1,0 +1,31 @@
+<div nbSpinnerStatus="primary" class="file-uploader-container">
+	<input
+		type="text"
+		class="form-control"
+		[placeholder]="placeholder"
+		[formControl]="inputControl"
+		(change)="inputUrlChanged()"
+	/>
+	<input
+		#fileInput
+		type="file"
+		id="fileInput"
+		ng2FileSelect
+		(change)="imageUploadHandler()"
+		[hidden]="true"
+		[uploader]="uploader"
+	/>
+	<button
+		nbButton
+		status="primary"
+		outline
+		size="tiny"
+		debounceClick
+		(throttledClick)="fileInput.click()"
+	>
+		<i class="far fa-folder mr-1"></i>
+		<span class="text">
+			{{ 'BROWSE' | translate | titlecase }}
+		</span>
+	</button>
+</div>

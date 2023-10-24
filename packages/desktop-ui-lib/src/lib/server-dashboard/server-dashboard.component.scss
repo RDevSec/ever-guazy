@@ -1,0 +1,94 @@
+  .button-big {
+    font-size: 14px;
+    font-weight: 600;
+    height: 32px;
+    width: auto;
+  }
+
+  .button-small {
+    font-size: 14px;
+    font-weight: bold;
+    height: 45px;
+    width: 120px;
+  }
+
+  .icon-medium {
+    font-size: 48px;
+  }
+
+  .margin-content {
+    h4, h5 {
+      font-family: monospace;
+    }
+    .button {
+      margin-top: auto !important;
+    }
+  }
+
+  .col-center {
+    margin: auto;
+  }
+
+  .margin-icon {
+    margin-top: 0px;
+    height: 30px;
+  }
+
+  .margin-icon-small {
+    margin-top: 35px;
+    height: 45px;
+  }
+
+  .content-body {
+    height: 100%;
+  }
+
+  .top-bottom-space {
+    padding: 1px !important;
+  }
+
+  .log-box {
+    background-color: black;
+    color: white;
+    font-size: 11px;
+    text-align: left;
+	border-radius: 0 0 var(--border-radius) var(--border-radius) !important;
+  }
+
+  .log-content {
+    overflow-y: auto;
+    font-family: monospace;
+    height: calc(100vh - 15.5rem) !important;
+  }
+
+  .accordion {
+    height: calc(100vh - 11rem) !important;
+  }
+
+  .content-text {
+    color: #08c234;
+    font-size: 11px;
+    font-family: monospace !important;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .btn-bottom {
+    position: absolute;
+    bottom: 0;
+    left: -50px;
+  }
+
+  ::ng-deep body {
+    overflow: hidden !important;
+  }
+
+  .fh {
+    height: 100%;
+  }
+
+  nb-accordion-item-header{
+    font-family: monospace;
+  }

@@ -1,0 +1,28 @@
+@import '../dialogs/about/about.component.scss';
+
+.ga-logo {
+	img {
+		height: 32px;
+	}
+}
+
+.splash-screen {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.version-text {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	button {
+		font-size: 11px;
+        font-weight: 500;
+		background-color: var(--gauzy-card-2) !important;
+		border-radius: var(--border-radius) !important;
+		border: unset !important;
+	}
+}

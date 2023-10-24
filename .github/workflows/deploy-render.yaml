@@ -1,0 +1,34 @@
+name: Deploy to Render Demo
+
+on:
+    workflow_run:
+        workflows: ['Build and Publish Docker Images Demo']
+        branches: [develop, temp]
+        types:
+            - completed
+
+jobs:
+    deploy-demo:
+        runs-on: ubuntu-latest
+
+        environment: demo
+
+        steps:
+         - name: Checkout code
+           uses: actions/checkout@v2
+
+         - name: Set up Render CLI
+           run: |
+             curl -o render https://render.com/static/render-cli-linux
+             chmod +x render
+             sudo mv render /usr/local/bin/render
+           env:
+             RENDER_EMAIL: ${{ secrets.RENDER_EMAIL }}
+             RENDER_PASSWORD: ${{ secrets.RENDER_PASSWORD }}
+
+         - name: Deploy Services
+           run: |
+                 render service push
+           env:
+             RENDER_EMAIL: ${{ secrets.RENDER_EMAIL }}
+             RENDER_PASSWORD: ${{ secrets.RENDER_PASSWORD }}

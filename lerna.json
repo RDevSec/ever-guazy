@@ -1,0 +1,22 @@
+{
+	"lerna": "3.13.0",
+	"npmClient": "yarn",
+	"version": "0.1.0",
+	"changelog": {
+		"repo": "ever-co/ever-gauzy",
+		"cacheDir": ".changelog",
+		"labels": {}
+	},
+	"packages": ["libs/*", "apps/*", "packages/*", "packages/plugins/*"],
+	"useNx": true,
+	"useWorkspaces": true,
+	"command": {
+		"exec": {
+			"scope": ["@ngx-starter-kit/*"]
+		},
+		"clean": {
+			"yes": true
+		}
+	},
+	"npmClientArgs": ["--no-package-lock"]
+}

@@ -1,0 +1,18 @@
+<nb-layout class="h-100 p-0 m-0">
+	<nb-layout-column class="h-100 p-0 m-0">
+		<nb-card class="notification p-0 m-0">
+			<nb-card-header class="notification-header">
+				<div class="notification-header-title">
+					<img class="icon-logo" [src]="logoUrl" />
+					<div class="title-window">Screen Capture</div>
+				</div>
+				<div class="notification-header-note">
+					<span class="hidden-long-text">{{ note }}</span>
+				</div>
+			</nb-card-header>
+			<nb-card-body class="notification-body">
+				<img class="screen-capture-img" [src]="screenCaptureUrl$ | async" />
+			</nb-card-body>
+		</nb-card>
+	</nb-layout-column>
+</nb-layout>

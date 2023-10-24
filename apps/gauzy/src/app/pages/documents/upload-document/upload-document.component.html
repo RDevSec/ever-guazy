@@ -1,0 +1,14 @@
+<div class="row">
+	<div class="col-sm-12">
+		<div class="form-group">
+			<ngx-file-uploader-input
+				id="inputDocUrl"
+				[folder]="'documents'"
+				[placeholder]="'FORM.PLACEHOLDERS.UPLOADER_DOCUMENT_PLACEHOLDER' | translate"
+				[fileUrl]="isDocument ? documentUrl : docUrl.value"
+				(uploadedImageAsset)="uploadedDocumentAsset($event)"
+				(uploadedImgUrl)="uploadedDocumentUrl($event)"
+			></ngx-file-uploader-input>
+		</div>
+	</div>
+</div>
