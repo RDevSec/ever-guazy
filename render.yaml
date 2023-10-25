@@ -1,5 +1,5 @@
 services:
-  - type: web
+  - type: docker
     name: ever-gauzy-api
     image: "ghcr.io/ever-co/gauzy-api-demo:latest"
     envVars:
@@ -33,7 +33,7 @@ services:
         value: 86400
     healthCheckPath: /api/health
 
-  - type: web
+  - type: docker
     name: ever-gauzy-webapp
     image: "ghcr.io/ever-co/gauzy-webapp-demo:latest"
     envVars:
