@@ -1,7 +1,9 @@
 services:
-  - type: docker
+  - type: web
+    runtime: docker
+    image:
+      url: ghcr.io/ever-co/gauzy-api-demo:latest
     name: ever-gauzy-api
-    image: "ghcr.io/ever-co/gauzy-api-demo:latest"
     envVars:
       - key: API_HOST
         value: 0.0.0.0
@@ -33,9 +35,11 @@ services:
         value: 86400
     healthCheckPath: /api/health
 
-  - type: docker
+  - type: web
     name: ever-gauzy-webapp
-    image: "ghcr.io/ever-co/gauzy-webapp-demo:latest"
+    runtime: docker
+    image:
+      url: ghcr.io/ever-co/gauzy-webapp-demo:latest
     envVars:
       - key: DEMO
         value: true
