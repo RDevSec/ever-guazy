@@ -11,27 +11,27 @@ on:
     branches:
       - develop
 jobs:
-    deploy-demo:
-        runs-on: ubuntu-latest
+  deploy-demo:
+    runs-on: ubuntu-latest
 
-        environment: demo
+    environment: demo
 
-        steps:
-         - name: Checkout code
-           uses: actions/checkout@v2
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-         - name: Set up Render CLI
-           run: |
-             curl -o render https://render.com/static/render-cli-linux
-             chmod +x render
-             sudo mv render /usr/local/bin/render
-           env:
-             RENDER_EMAIL: "rohit997166.prasad@gmail.com"
-             RENDER_PASSWORD: "Rohit123@"
+      - name: Set up Render CLI
+        run: |
+          curl -o render https://github.com/render-oss/render-cli/releases/download/v0.1.8/render-linux-x86_64
+          chmod +x render
+          sudo mv render /usr/local/bin/render
+        env:
+          RENDER_EMAIL: "rohit997166.prasad@gmail.com"
+          RENDER_PASSWORD: "Rohit123@"
 
-         - name: Deploy Services
-           run: |
-                 render service push
-           env:
-             RENDER_EMAIL: "rohit997166.prasad@gmail.com"
-             RENDER_PASSWORD: "Rohit123@"
+      - name: Deploy Services
+        run: |
+          render service push
+        env:
+          RENDER_EMAIL: "rohit997166.prasad@gmail.com"
+          RENDER_PASSWORD: "Rohit123@"
