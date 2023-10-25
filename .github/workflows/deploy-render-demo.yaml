@@ -39,4 +39,4 @@ jobs:
                 EOF
       - name: Deploy Services
         run: |
-          render blueprint from-template ever-guazy  --non-interactive --profile test
+          render blueprint launch --profile test
