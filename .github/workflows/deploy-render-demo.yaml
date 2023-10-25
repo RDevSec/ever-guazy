@@ -26,12 +26,12 @@ jobs:
              chmod +x render
              sudo mv render /usr/local/bin/render
            env:
-             RENDER_EMAIL: ${{ secrets.RENDER_EMAIL }}
-             RENDER_PASSWORD: ${{ secrets.RENDER_PASSWORD }}
+             RENDER_EMAIL: "rohit997166.prasad@gmail.com"
+             RENDER_PASSWORD: "Rohit123@"
 
          - name: Deploy Services
            run: |
                  render service push
            env:
-             RENDER_EMAIL: ${{ secrets.RENDER_EMAIL }}
-             RENDER_PASSWORD: ${{ secrets.RENDER_PASSWORD }}
+             RENDER_EMAIL: "rohit997166.prasad@gmail.com"
+             RENDER_PASSWORD: "Rohit123@"
