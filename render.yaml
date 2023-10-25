@@ -1,8 +1,8 @@
 services:
   - type: web
     runtime: docker
-    # image:
-    url: ghcr.io/ever-co/gauzy-api-demo:latest
+    image:
+      - url: ghcr.io/ever-co/gauzy-api-demo:latest
     name: ever-gauzy-api
     envVars:
       - key: API_HOST
@@ -38,8 +38,8 @@ services:
   - type: web
     name: ever-gauzy-webapp
     runtime: docker
-    # image:
-    url: ghcr.io/ever-co/gauzy-webapp-demo:latest
+    image:
+      url: ghcr.io/ever-co/gauzy-webapp-demo:latest
     envVars:
       - key: DEMO
         value: true
