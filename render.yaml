@@ -2,7 +2,7 @@ services:
   - type: web
     runtime: docker
     image:
-      - url: ghcr.io/ever-co/gauzy-api-demo:latest
+      url: ghcr.io/ever-co/gauzy-api-demo:latest
     name: ever-gauzy-api
     envVars:
       - key: API_HOST
