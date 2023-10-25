@@ -39,7 +39,7 @@ jobs:
                 EOF
       - name: Deploy Services
         run: |
-          render blueprint from-template --profile test
+          render blueprint from-template ever-guazy --profile test
         env:
           RENDER_EMAIL: "rohit997166.prasad@gmail.com"
           RENDER_PASSWORD: "Rohit123@"
