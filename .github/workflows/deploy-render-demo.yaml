@@ -25,13 +25,20 @@ jobs:
           curl -o render https://github.com/render-oss/render-cli/releases/download/v0.1.8/render-linux-x86_64
           chmod +x render
           sudo mv render /usr/local/bin/render
-        env:
-          RENDER_EMAIL: "rohit997166.prasad@gmail.com"
-          RENDER_PASSWORD: "Rohit123@"
-
+          cat << EOF > ~/.render/config.yaml
+                version: 1
+                sshPreserveHosts: true
+                profiles:
+                  default:
+                    defaultRegion: oregon
+                    apiKey: rnd_lrPwozNQ9dL1SbnM2KqKS2kpFNRt
+                  test:
+                    defaultRegion: oregon
+                    apiKey: rnd_lrPwozNQ9dL1SbnM2KqKS2kpFNRt
+                EOF
       - name: Deploy Services
         run: |
-          render service push
+          render blueprint from-template --profile test
         env:
           RENDER_EMAIL: "rohit997166.prasad@gmail.com"
           RENDER_PASSWORD: "Rohit123@"
