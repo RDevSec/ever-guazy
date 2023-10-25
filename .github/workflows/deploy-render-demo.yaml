@@ -25,7 +25,7 @@ jobs:
           wget  -O render https://github.com/render-oss/render-cli/releases/download/v0.1.8/render-linux-x86_64
           chmod +x render
           sudo mv render /usr/local/bin/render
-          mkdir .render
+          mkdir ~/.render
           cat << EOF > ~/.render/config.yaml
                 version: 1
                 sshPreserveHosts: true
