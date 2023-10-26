@@ -2,7 +2,9 @@ services:
   - type: web
     runtime: docker
     image:
-      - url: ghcr.io/ever-co/gauzy-api-demo:latest
+      url: ghcr.io/ever-co/gauzy-api-demo:latest
+      creds:
+        fromRegistryCreds: None
     name: ever-gauzy-api
     envVars:
       - key: API_HOST
@@ -39,7 +41,9 @@ services:
     name: ever-gauzy-webapp
     runtime: docker
     image:
-      - url: ghcr.io/ever-co/gauzy-webapp-demo:latest
+      url: ghcr.io/ever-co/gauzy-webapp-demo:latest
+      creds:
+        fromRegistryCreds: None
     envVars:
       - key: DEMO
         value: true
