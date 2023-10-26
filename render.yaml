@@ -75,7 +75,7 @@ services:
         value: USD
     healthCheckPath: /
 
-  - type: pserv
+  - type: worker
     name: ever-gauzy-db dev
     env: demo
     plan: standard
