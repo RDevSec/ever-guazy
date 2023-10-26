@@ -76,10 +76,11 @@ services:
     healthCheckPath: /
 
   - type: worker
-    #name: ever-gauzy-db dev
+    name: ever-gauzy-db dev
     env: demo
     plan: standard
     envVars:
-      #  POSTGRES_DB: gauzy-pool
+      POSTGRES_DB: gauzy-pool
       POSTGRES_USER: ${{ secrets.DB_USER }}
       POSTGRES_PASSWORD: ${{ secrets.DB_PASS }}
+    ipAllowList: []
