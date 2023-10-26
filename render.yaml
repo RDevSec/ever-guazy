@@ -70,7 +70,7 @@ services:
         value: USD
     healthCheckPath: /
     ipAllowList:
-      - source: 0.9.9.0/0
+      - source: 0.0.0.0/0
         description: anywhere
   # - name: ever-gauzy-db dev
   #   type: postgres
