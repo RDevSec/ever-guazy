@@ -74,11 +74,12 @@ services:
       - key: DEFAULT_CURRENCY
         value: USD
     healthCheckPath: /
-  # - name: ever-gauzy-db dev
-  #   type: postgres
-  #   env: demo
-  #   plan: free
-  #   envVars:
-  #     POSTGRES_DB: gauzy-pool
-  #     POSTGRES_USER: ${{ secrets.DB_USER }}
-  #     POSTGRES_PASSWORD: ${{ secrets.DB_PASS }}
+
+  - type: postgres
+    name: ever-gauzy-db dev
+    env: demo
+    plan: free
+    envVars:
+      POSTGRES_DB: gauzy-pool
+      POSTGRES_USER: ${{ secrets.DB_USER }}
+      POSTGRES_PASSWORD: ${{ secrets.DB_PASS }}
