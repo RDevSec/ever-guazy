@@ -37,9 +37,7 @@ services:
         value: refreshSecretKey
       - key: JWT_REFRESH_TOKEN_EXPIRATION_TIME
         value: 86400
-
     healthCheckPath: /api/health
-
   - type: web
     name: ever-gauzy-webapp
     runtime: image
@@ -74,15 +72,14 @@ services:
         value: 23.3332736
       - key: DEFAULT_CURRENCY
         value: USD
-      - key: POSTGRES_DB
-        value: gauzy-pool
     healthCheckPath: /
-
   - type: worker
     name: ever-gauzy-db dev
     env: demo
     plan: standard
     envVars:
-      POSTGRES_DB: gauzy
-      POSTGRES_USER: ${{ secrets.DB_USER }}
-      POSTGRES_PASSWORD: ${{ secrets.DB_PASS }}
+      DB_NAME: gauzy
+      # DB_USER: ${{ secrets.DB_USER }}
+      #DB_PASSWORD: ${{ secrets.DB_PASS }}
+      DB_USER: postgres
+      DB_PASSWORD: gauzy_password
