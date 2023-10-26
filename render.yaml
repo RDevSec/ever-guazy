@@ -83,6 +83,6 @@ services:
     env: demo
     plan: standard
     envVars:
-      POSTGRES_DB: gauzy-pool
+      POSTGRES_DB: gauzy
       POSTGRES_USER: ${{ secrets.DB_USER }}
       POSTGRES_PASSWORD: ${{ secrets.DB_PASS }}
