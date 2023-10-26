@@ -5,7 +5,7 @@ services:
       url: ghcr.io/ever-co/gauzy-api-demo:latest
       creds:
         fromRegistryCreds:
-          name: my-credential-name
+          name: RohitGCRCred
     name: ever-gauzy-api
     envVars:
       - key: API_HOST
@@ -45,7 +45,7 @@ services:
       url: ghcr.io/ever-co/gauzy-webapp-demo:latest
       creds:
         fromRegistryCreds:
-          name: my-credential-name
+          name: RohitGCRCred
     envVars:
       - key: DEMO
         value: true
