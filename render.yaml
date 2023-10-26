@@ -2,7 +2,7 @@ services:
   - type: web
     runtime: docker
     image:
-      url: ghcr.io/ever-co/gauzy-api-demo:latest
+      - url: ghcr.io/ever-co/gauzy-api-demo:latest
     name: ever-gauzy-api
     envVars:
       - key: API_HOST
@@ -34,15 +34,12 @@ services:
       - key: JWT_REFRESH_TOKEN_EXPIRATION_TIME
         value: 86400
     healthCheckPath: /api/health
-    ipAllowList:
-      - source: 0.0.0.0/0
-        description: anywhere
 
   - type: web
     name: ever-gauzy-webapp
     runtime: docker
     image:
-      url: ghcr.io/ever-co/gauzy-webapp-demo:latest
+      - url: ghcr.io/ever-co/gauzy-webapp-demo:latest
     envVars:
       - key: DEMO
         value: true
@@ -69,9 +66,6 @@ services:
       - key: DEFAULT_CURRENCY
         value: USD
     healthCheckPath: /
-    ipAllowList:
-      - source: 0.0.0.0/0
-        description: anywhere
   # - name: ever-gauzy-db dev
   #   type: postgres
   #   env: demo
