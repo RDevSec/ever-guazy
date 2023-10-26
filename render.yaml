@@ -83,4 +83,3 @@ services:
       POSTGRES_DB: gauzy-pool
       POSTGRES_USER: ${{ secrets.DB_USER }}
       POSTGRES_PASSWORD: ${{ secrets.DB_PASS }}
-    ipAllowList: []
