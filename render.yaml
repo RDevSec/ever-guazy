@@ -37,6 +37,8 @@ services:
         value: refreshSecretKey
       - key: JWT_REFRESH_TOKEN_EXPIRATION_TIME
         value: 86400
+      - key: POSTGRES_DB
+        value: gauzy-pool
     healthCheckPath: /api/health
 
   - type: web
