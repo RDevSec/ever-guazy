@@ -80,6 +80,6 @@ services:
     envVars:
       # DB_USER: ${{ secrets.DB_USER }}
       #DB_PASSWORD: ${{ secrets.DB_PASS }
-      DB_NAME: gauzy
-      DB_USER: postgres
-      DB_PASS: root
+      # DB_NAME: gauzy
+      # DB_USER: postgres
+      # DB_PASS: root
