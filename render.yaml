@@ -77,7 +77,7 @@ services:
 
   - type: pserv
     name: ever-gauzy-db dev
-    #env: demo
+    env: demo
     plan: standard
     envVars:
       POSTGRES_DB: gauzy-pool
