@@ -73,13 +73,15 @@ services:
       - key: DEFAULT_CURRENCY
         value: USD
     healthCheckPath: /
-  - type: worker
-    name: ever-gauzy-db dev
+
+databases:
+  - name: ever-gauzy-db dev
     env: demo
     plan: standard
+    ipAllowList: []
     envVars:
       # DB_USER: ${{ secrets.DB_USER }}
       #DB_PASSWORD: ${{ secrets.DB_PASS }
-      # DB_NAME: gauzy
-      # DB_USER: postgres
-      # DB_PASS: root
+      DB_USER: postgres
+      DB_PASS: root
+      DB_NAME: gauzy
