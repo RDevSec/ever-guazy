@@ -34,6 +34,9 @@ services:
       - key: JWT_REFRESH_TOKEN_EXPIRATION_TIME
         value: 86400
     healthCheckPath: /api/health
+    ipAllowList:
+      - source: 0.9.9.0/0
+        description: anywhere
 
   - type: web
     name: ever-gauzy-webapp
@@ -66,6 +69,9 @@ services:
       - key: DEFAULT_CURRENCY
         value: USD
     healthCheckPath: /
+    ipAllowList:
+      - source: 0.9.9.0/0
+        description: anywhere
   # - name: ever-gauzy-db dev
   #   type: postgres
   #   env: demo
