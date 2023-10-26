@@ -73,15 +73,14 @@ services:
       - key: DEFAULT_CURRENCY
         value: USD
     healthCheckPath: /
-
-databases:
-  - name: ever-gauzy-db dev
-    plan: standard
-    ipAllowList: []
-    envVars:
-      - key: DB_USER
-        value: postgres
-      - key: DB_PASS
-        value: root
-      - key: DB_NAME
-        value: gauzy
+# databases:
+#   - name: ever-gauzy-db dev
+#     plan: standard
+#     ipAllowList: []
+#     envVars:
+#       - key: DB_USER
+#         value: postgres
+#       - key: DB_PASS
+#         value: root
+#       - key: DB_NAME
+#         value: gauzy
