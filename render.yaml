@@ -75,7 +75,7 @@ services:
         value: USD
     healthCheckPath: /
 
-  - type: postgreSQL
+  - type: pserv
     name: ever-gauzy-db dev
     #env: demo
     plan: standard
