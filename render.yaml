@@ -76,12 +76,12 @@ services:
 
 databases:
   - name: ever-gauzy-db dev
-    env: demo
     plan: standard
     ipAllowList: []
     envVars:
-      # DB_USER: ${{ secrets.DB_USER }}
-      #DB_PASSWORD: ${{ secrets.DB_PASS }
-      DB_USER: postgres
-      DB_PASS: root
-      DB_NAME: gauzy
+      - key: DB_USER
+        value: postgres
+      - key: DB_PASS
+        value: root
+      - key: DB_NAME
+        value: gauzy
