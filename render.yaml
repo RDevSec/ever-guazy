@@ -77,8 +77,8 @@ services:
 
   - type: postgres
     name: ever-gauzy-db dev
-    env: demo
-    plan: free
+    #env: demo
+    plan: standard
     envVars:
       POSTGRES_DB: gauzy-pool
       POSTGRES_USER: ${{ secrets.DB_USER }}
