@@ -1,6 +1,6 @@
 services:
   - type: web
-    runtime: docker
+    runtime: image
     image:
       url: ghcr.io/ever-co/gauzy-api-demo:latest
       creds:
@@ -40,7 +40,7 @@ services:
 
   - type: web
     name: ever-gauzy-webapp
-    runtime: docker
+    runtime: image
     image:
       url: ghcr.io/ever-co/gauzy-webapp-demo:latest
       creds:
