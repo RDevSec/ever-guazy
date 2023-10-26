@@ -35,7 +35,7 @@ services:
         value: 86400
     healthCheckPath: /api/health
     ipAllowList:
-      - source: 0.9.9.0/0
+      - source: 0.0.0.0/0
         description: anywhere
 
   - type: web
