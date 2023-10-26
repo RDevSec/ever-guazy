@@ -6,6 +6,7 @@ services:
       creds:
         fromRegistryCreds:
           name: RohitGCRCred
+    plan: pro
     name: ever-gauzy-api
     envVars:
       - key: API_HOST
@@ -41,6 +42,7 @@ services:
   - type: web
     name: ever-gauzy-webapp
     runtime: image
+    plan: standard
     image:
       url: ghcr.io/ever-co/gauzy-webapp-demo:latest
       creds:
